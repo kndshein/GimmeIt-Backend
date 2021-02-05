@@ -70,19 +70,7 @@ const itemSchema = new Schema{
 
 - As a donator, I can list items to give away.
 - AS a donator, I can update my existing listings.
-- As a donator, I can also be a seeker.ppo
-
-| **URL**                            | **HTTP Verb** | **Action** | **Description**          |
-| ---------------------------------- | ------------- | ---------- | ------------------------ |
-| /api/authors/:firstName            | GET           | show       | get author by first name |
-| /api/cookbooks/:title              | GET           | show       | cookbook by title        |
-| /api/cookbooks/year/:yearPublished | GET           | show       | cookbook by year         |
-| /api/authors                       | POST          | show       | create new author        |
-| /api/cookbooks                     | POST          | create     | create a cookbook        |
-| /api/authors/:id                   | PUT           | update     | update a single author   |
-| /api/cookbooks/:id                 | PUT           | update     | update a single cookbook |
-| /api/cookbook/:title               | DELETE        | destroy    | destroy a single author  |
-
+- As a donator, I can also be a seeker.
 - As a donator, I can see that a seeker has checked out my item.
 - _As a donator, I can accept transactions for shipping. (Post-MVP)_
 
