@@ -9,7 +9,7 @@
 
 ### Project Description
 
-A webapp that handles giveaways.
+An e-commerce webapp where users can create a profile to giveaway items. Users can also
 
 # Project Planning
 
@@ -84,8 +84,8 @@ const itemSchema = new Schema{
 | React: Routes for API    |    H     |     2 hrs      |             |
 | React: Mapping API       |    H     |     5 hrs      |             |
 | React: States            |    H     |     10 hrs     |             |
-| CSS: Design              |    H     |     20 hrs     |             |
-| **Total**                |          |   **40 hrs**   |             |
+| CSS: Design              |    H     |     25 hrs     |             |
+| **Total**                |          |   **45 hrs**   |             |
 
 ##### Frontend Post-MVP
 
@@ -94,11 +94,12 @@ const itemSchema = new Schema{
 | Credit Card transaction |    H     |     5 hrs      |             |
 | Profile Login           |    H     |     5 hrs      |             |
 | Profile Information     |    H     |     5 hrs      |             |
+| Sort or Search Items    |    H     |     5 hrs      |             |
 | React: Global State     |    M     |     3 hrs      |             |
 | Image Carousel          |    M     |     3 hrs      |             |
 | Image Upload            |    L     |     5 hrs      |             |
 | "Thanks for Purchasing" |    L     |     3 hrs      |             |
-| **Total**               |          |   **29 hrs**   |             |
+| **Total**               |          |   **34 hrs**   |             |
 
 ##### Backend MVP
 
@@ -121,6 +122,14 @@ const itemSchema = new Schema{
 | **Total**                  |          |   **35 hrs**   |             |
 
 ### Time Frames
+
+| **Day**   | **Date**  | **Minimum Frontend**              | **Minimum Backend**  |
+| --------- | --------- | --------------------------------- | -------------------- |
+| Sunday    | 2/7/2021  | Components                        | Models, Seed, Routes |
+| Monday    | 2/8/2021  | Mobile Styling, States            | Login Profiles       |
+| Tuesday   | 2/9/2021  | Desktop Styling                   | Start Post-MVP       |
+| Wednesday | 2/10/2021 | Responsive Design, Start Post-MVP | Continue Post-MVP    |
+| Thursday  | 2/11/2021 | Final Touches                     | Final Touches        |
 
 ### Routes
 
