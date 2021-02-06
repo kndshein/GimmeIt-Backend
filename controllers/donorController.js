@@ -16,4 +16,14 @@ router.get('/id/:id', async (req,res) =>{
     }).catch(err => res.json({status: 400, err: err}))
 })
 
+router.post('/', async (req,res) =>{
+    const donor = req.body
+
+    Donor.create(donor).then(() => {
+        Donor.find({}).populate("items").then(allDonors =>{
+            res.json(allDonors)
+        }).catch(err => res.json({status: 400, err: err}))
+    })
+})
+
 module.exports = router;
