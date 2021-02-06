@@ -31,11 +31,19 @@ router.post('/', async (req,res) =>{
 })
 
 //Update a single donor by id
-router.put('/id/:id', async (req,res) => {
-    Donor.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(() =>{
-        Donor.find({}).populate("items").then(allDonors => {
-            res.json(allDonors)
+//Update a single item by id and updates the donor list of items to contain the listed item
+router.put('/id/:id/:donorid', async (req,res) => {
+    Item.findByIdAndUpdate(req.params.id, req.body, {new: true}).then((item) =>{
+        Donor.findById(req.params.donorid).populate("items").then(donor =>{
+            donor.items.push(item._id)
+            donor.save().then(() => {
+                Item.find({}).populate("donor").then(allItems => {
+                    res.json(allItems)
+                }).catch(err => res.json({status: 400, err: err}))
+            })
         }).catch(err => res.json({status: 400, err: err}))
+        
+        
     }).catch(err => res.json({status: 400, err: err}))
 })
 
