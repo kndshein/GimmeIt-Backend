@@ -10,4 +10,10 @@ router.get('/', async (req,res) => {
     }).catch(err => res.json({status: 400, err: err}))
 })
 
+router.get('/id/:id', async (req,res) =>{
+    Donor.findById(req.params.id).populate("items").then(donor =>{
+        res.json(donor)
+    }).catch(err => res.json({status: 400, err: err}))
+})
+
 module.exports = router;

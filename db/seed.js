@@ -24,5 +24,26 @@ Donor.find({}).remove(() => {
           donor.save()
         })
       })
+      let ron = Donor.create({
+        username: "ron7",
+        password: "ChudleyCannons",
+        firstName: 'runauld',
+        lastName: 'wozlib',
+        email: "weasilboy@gmail.com"
+      }).then(donor => {
+        Promise.all([
+          Item.create({
+            img: 'nothing',
+            name: 'deluminator',
+            description: "Deluminator designed by Albus Dumbldor, puts out all your lights with one click.",
+            shipping: "",
+            donor: donor._id
+          }).then(item => {
+            donor.items.push(item)
+          })
+        ]).then(() => {
+          donor.save()
+        })
+      })
     })
   })
