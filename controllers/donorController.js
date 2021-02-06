@@ -26,4 +26,12 @@ router.post('/', async (req,res) =>{
     })
 })
 
+router.put('/id/:id', async (req,res) => {
+    Donor.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(() =>{
+        Donor.find({}).populate("items").then(allDonors => {
+            res.json(allDonors)
+        }).catch(err => res.json({status: 400, err: err}))
+    }).catch(err => res.json({status: 400, err: err}))
+})
+
 module.exports = router;
