@@ -25,17 +25,25 @@ router.get("/id/:id", async (req, res) => {
 });
 
 //Add a new item
-router.post("/", async (req, res) => {
-  const item = req.body;
-  Item.create(item).then(() => {
-    Item.find({})
-      .populate("donor")
-      .then((allItems) => {
-        res.json(allItems);
-      })
-      .catch((err) => res.json({ status: 400, err: err }));
-  });
-});
+// router.post("/donorid/:donorid", async (req, res) => {
+//   const item = req.body;
+//   Item.create(item).then((item) => {
+//     Donor.findById(req.params.donorid)
+//     .populate("items")
+//     .then((donor) => {
+//       donor.items.push(item._id);
+//       donor.save().then(() => {
+//         Item.find({})
+//           .populate("donor")
+//           .then((allItems) => {
+//             res.json(allItems);
+//           })
+//           .catch((err) => res.json({ status: 400, err: err }));
+//       });
+//     })
+//     .catch((err) => res.json({ status: 400, err: err }));
+//   });
+// });
 
 //Update a single item by id
 router.put("/id/:id", async (req, res) => {
