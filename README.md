@@ -99,7 +99,8 @@ const itemSchema = new Schema{
 | Image Carousel          |    M     |     3 hrs      |             |
 | Image Upload            |    L     |     5 hrs      |             |
 | "Thanks for Purchasing" |    L     |     3 hrs      |             |
-| **Total**               |          |   **34 hrs**   |             |
+| Light Mode Toggle       |    L     |     5 hrs      |             |
+| **Total**               |          |   **39 hrs**   |             |
 
 ##### Backend MVP
 
