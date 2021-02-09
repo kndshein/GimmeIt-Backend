@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 4000;
 const mongoose = require("./db/connection");
 const donorRouter = require("./controllers/donorController");
 const itemRouter = require("./controllers/itemController");
+const verifyToken = require("./controllers/validate-token");
 
 ////// MIDDLEWARE //////
 app.use(cors());

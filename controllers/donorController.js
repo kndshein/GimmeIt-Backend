@@ -10,7 +10,7 @@ const { registerValidation, loginValidation } = require("../validation");
 const verifyToken = require("./validate-token");
 
 //Finds all donors
-router.get("/", async (req, res) => {
+router.get("/", verifyToken, async (req, res) => {
   Donor.find({})
     .populate("items")
     .then((allDonors) => {
@@ -59,17 +59,19 @@ router.put("/id/:id", async (req, res) => {
 });
 
 //Add an item to specific donor by id
-router.get("/id/create/:id", verifyToken, async (req, res) => {
-  const item = req.body;
-  Donor.findById(req.params.id)
+router.get("/item/create", verifyToken, async (req, res) => {
+  const donorId = req.donor.id;
+  console.log(donorId);
+  const item = req.query;
+  Donor.findById(donorId)
     .populate("items")
     .then((donor) => {
       Promise.all([
         Item.create({
-          img: req.body.img,
-          name: req.body.name,
-          description: req.body.description,
-          shipping: req.body.shipping,
+          img: req.query.img,
+          name: req.query.name,
+          description: req.query.description,
+          shipping: req.query.shipping,
           donor: donor._id,
         }).then((item) => {
           donor.items.push(item);
