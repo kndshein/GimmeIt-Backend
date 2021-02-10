@@ -15,9 +15,8 @@ An e-commerce webapp where users can create a profile to giveaway items. Users c
 
 ### Wireframes
 
-- [Mobile]
-- [Tablet]
-- [Desktop]
+- [Sketch]
+- [MockUp](https://www.figma.com/file/jor1UqzyZXIcn7z7NZOAvy/Donation-App-Mock-up)
 - [React Architecture](https://docs.google.com/drawings/d/1SXtZHHoyvBN9LyvzRCznBXgXRc66gbG7-O_1b89FF0c/edit?usp=sharing)
 
 <details>

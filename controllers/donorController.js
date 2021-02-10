@@ -20,8 +20,9 @@ router.get("/", verifyToken, async (req, res) => {
 });
 
 //Find a single donor by id
-router.get("/id/:id", async (req, res) => {
-  Donor.findById(req.params.id)
+router.get("/profile", verifyToken, async (req, res) => {
+  const donorId = req.donor.id;
+  Donor.findById(donorId)
     .populate("items")
     .then((donor) => {
       res.json(donor);
@@ -45,8 +46,9 @@ router.get("/id/:id", async (req, res) => {
 //#endregion
 
 //Update a single donor by id
-router.put("/id/:id", async (req, res) => {
-  Donor.findByIdAndUpdate(req.params.id, req.body, { new: true })
+router.put("/profile/edit", verifyToken, async (req, res) => {
+  const donorId = req.donor.id;
+  Donor.findByIdAndUpdate(donorId, req.body, { new: true })
     .then(() => {
       Donor.find({})
         .populate("items")
@@ -61,7 +63,6 @@ router.put("/id/:id", async (req, res) => {
 //Add an item to specific donor by id
 router.get("/item/create", verifyToken, async (req, res) => {
   const donorId = req.donor.id;
-  console.log(donorId);
   const item = req.query;
   Donor.findById(donorId)
     .populate("items")
