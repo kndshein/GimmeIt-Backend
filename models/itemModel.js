@@ -9,7 +9,7 @@ const itemSchema = new Schema({
         type: Boolean, required: true , 
         default: true 
     },
-    shipping: String,
+    shipping: Array,
     donor: {
         type: Schema.Types.ObjectId,
         ref: "Donor",

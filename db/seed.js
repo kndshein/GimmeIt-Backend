@@ -15,7 +15,7 @@ Donor.find({}).remove(() => {
           img: "nothing",
           name: "Old Sneak-a-scope",
           description: "Dingey old sneak-o-scope, barley works.",
-          shipping: "",
+          shipping: [],
           donor: donor._id,
         }).then((item) => {
           donor.items.push(item);
@@ -37,7 +37,7 @@ Donor.find({}).remove(() => {
           name: "deluminator",
           description:
             "Deluminator designed by Albus Dumbldor, puts out all your lights with one click.",
-          shipping: "",
+          shipping: [],
           donor: donor._id,
         }).then((item) => {
           donor.items.push(item);
