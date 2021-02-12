@@ -9,7 +9,7 @@
 
 ### Project Description
 
-An e-commerce webapp where users can create a profile to giveaway items. Users can also
+An e-commerce webapp where users can post items they want to get rid of. Users must create a profile in order to post an item. If shipping is needed, there is an option to do so.
 
 # Project Planning
 
@@ -79,47 +79,47 @@ const itemSchema = new Schema{
 
 | Component                | Priority | Estimated Time | Actual Time |
 | ------------------------ | :------: | :------------: | :---------: |
-| React: Create Components |    H     |     3 hrs      |             |
-| React: Routes for API    |    H     |     2 hrs      |             |
-| React: Mapping API       |    H     |     5 hrs      |             |
-| React: States            |    H     |     10 hrs     |             |
-| CSS: Design              |    H     |     25 hrs     |             |
-| **Total**                |          |   **45 hrs**   |             |
+| React: Create Components |    H     |     3 hrs      |     2 hrs   |
+| React: Routes for API    |    H     |     2 hrs      |     2 hrs   |
+| React: Mapping API       |    H     |     5 hrs      |     4 hrs   |
+| React: States            |    H     |     10 hrs     |     7 hrs   |
+| CSS: Design              |    H     |     25 hrs     |    30 hrs   |
+| **Total**                |          |   **45 hrs**   | **45 hrs**  |
 
 ##### Frontend Post-MVP
 
 | Component               | Priority | Estimated Time | Actual Time |
 | ----------------------- | :------: | :------------: | :---------: |
-| Credit Card transaction |    H     |     5 hrs      |             |
-| Profile Login           |    H     |     5 hrs      |             |
-| Profile Information     |    H     |     5 hrs      |             |
-| Sort or Search Items    |    H     |     5 hrs      |             |
-| React: Global State     |    M     |     3 hrs      |             |
-| Image Carousel          |    M     |     3 hrs      |             |
-| Image Upload            |    L     |     5 hrs      |             |
-| "Thanks for Purchasing" |    L     |     3 hrs      |             |
-| Light Mode Toggle       |    L     |     5 hrs      |             |
-| **Total**               |          |   **39 hrs**   |             |
+| Credit Card transaction |    H     |     5 hrs      |    N/A      |
+| Profile Login           |    H     |     5 hrs       |   7 hrs     |
+| Profile Information     |    H     |     5 hrs       |   4 hrs     |
+| Sort or Search Items    |    H     |     5 hrs      |     N/A     |
+| React: Global State     |    M     |     3 hrs      |    N/A      |
+| Image Carousel          |    M     |     3 hrs      |      N/A    |
+| Image Upload            |    L     |     5 hrs      |    N/A      |
+| "Thanks for Purchasing" |    L     |     3 hrs      |   N/A       |
+| Light Mode Toggle       |    L     |     5 hrs      |    N/A      |
+| **Total**               |          |   **39 hrs**   | **11 hrs**  |
 
 ##### Backend MVP
 
 | Component        | Priority | Estimated Time | Actual Time |
 | ---------------- | :------: | :------------: | :---------: |
-| Login Profile    |    H     |     10 hrs     |             |
-| Creating Routes  |    H     |     10 hrs     |             |
-| Models / Schemas |    H     |     5 hrs      |             |
-| Seed Files       |    H     |     5 hrs      |             |
-| **Total**        |          |   **30 hrs**   |             |
+| Login Profile    |    H     |     10 hrs      |    10 hrs   |
+| Creating Routes  |    H     |     10 hrs     |   6 hrs     |
+| Models / Schemas |    H     |     5 hrs      |  5 hrs      |
+| Seed Files       |    H     |     5 hrs      |    2 hrs    |
+| **Total**        |          |   **30 hrs**   | **23 hrs**  |
 
 ##### Backend Post-MVP
 
 | Component                  | Priority | Estimated Time | Actual Time |
 | -------------------------- | :------: | :------------: | :---------: |
-| if (Login) then (Cart API) |    H     |     10 hrs     |             |
-| "Sold" API                 |    H     |     5 hrs      |             |
-| Stripe                     |    M     |     10 hrs     |             |
-| Login for Buyer            |    L     |     10 hrs     |             |
-| **Total**                  |          |   **35 hrs**   |             |
+| if (Login) then (Cart API) |    H     |     10 hrs     |    10hrs    |
+| "Sold" API                 |    H     |     5 hrs      |  5hrs       |
+| Stripe                     |    M     |     10 hrs     |    N/A      |
+| Login for Buyer            |    L     |     10 hrs     |   7 hrs     |
+| **Total**                  |          |   **35 hrs**   |**22 hrs**   |
 
 ### Time Frames
 
@@ -146,7 +146,11 @@ const itemSchema = new Schema{
 
 ## Additional Libraries
 
-- Dummy Text
+- React Icons
+- React Router DOM
+- JWT
+- Hapi/joi
+- Bcrypt
 
 ## Code Snippet
 
